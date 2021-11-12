@@ -55,7 +55,33 @@ bash ./dart/evaluation/run_eval_on_webnlg.sh
 For 3. and 4. above, note that you may need to modify some of the file paths.
 
 ## 1. Table-to-text Results
+There are three datasets here, namely [E2E](prefix_tuning_e2e.ipynb), [WebNLG](prefix_tuning_webnlg.ipynb), and [DART](prefix_tuning_dart.ipynb).
 
+**1. E2E** <br>
+
+The script below automatically does evaluation after it trains the model.
+```bash
+python train_e2e.py --preseqlen 5 --learning_rate 0.00007 --seed 22 --epoch 5 --notes earlystop
+```
+
+**2. WebNLG** <br>
+
+Training
+```bash
+python train_e2e.py --mode webnlg --preseqlen 5 --learning_rate 0.00005 --bsz 5 --seed 222 --epoch 5 --notes earlystop
+```
+Evaluation
+```bash
+bash ./dart/evaluation/run_eval_on_webnlg.sh
+```
+
+**3. DART** <br>
+
+Training
+```bash
+python train_e2e.py --mode triples --preseqlen 20 --seed 9 --bsz 5 --epoch 5 --learning_rate 0.00008
+```
+Evaluation is quite long and may require installing some libraries. Please refer to the [DART notebook](prefix_tuning_dart.ipynb).
 
 
 ## 2. Summarization Results
