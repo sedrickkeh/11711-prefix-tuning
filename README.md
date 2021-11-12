@@ -1,4 +1,14 @@
 # 11-711 Prefix Tuning Reproduction
+
+## Table of Contents
+0. [Quickstart](#0.-quickstart)
+1. [Table-to-text Results](#1.-Table-to-text-Results)
+2. [Summarization Results](#2.-Summarization-Results)
+3. [Low-data Settings](#3.-Low-data-Settings)
+4. [Ablation Studies](#4.-Ablation-Studies)
+
+
+## 0. Quickstart
 This repo contains the code we used to reproduce the paper [Prefix-Tuning: Optimizng Continuous Prompts for Generation](https://arxiv.org/abs/2101.00190).
 
 The main backbone of this code is the Prefix-Tuning repo published by the authors of the original paper.
