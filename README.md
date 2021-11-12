@@ -74,7 +74,6 @@ python train_e2e.py --preseqlen 5 --learning_rate 8e-5 --seed 88 --bsz 10 --lowd
 ```
 Dataset size 100
 ```bash
-Dataset 100
 python train_e2e.py --preseqlen 5 --learning_rate 7e-5 --seed 88 --bsz 10 --lowdata_token 'table-to-text-restaurant:' --epoch 100 --warmup_steps 100 --notes earlystoplowdata_88_100
 ```
 
