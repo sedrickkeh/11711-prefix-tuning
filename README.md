@@ -77,7 +77,7 @@ Dataset size 100
 python train_e2e.py --preseqlen 5 --learning_rate 7e-5 --seed 88 --bsz 10 --lowdata_token 'table-to-text-restaurant:' --epoch 100 --warmup_steps 100 --notes earlystoplowdata_88_100
 ```
 
-Experiments were done for dataset sizes 50, 100, 200, and 500. Scripts for dataset sizes 200 and 500 are analogous to the ones above.
+Experiments were done for dataset sizes 50, 100, 200, and 500. Scripts for dataset sizes 200 and 500 are analogous to the ones above. Exact hyperparameters can be found in the appendix of our submitted report.
 
 ## 4. Ablation Studies
 We conduct two ablation studies:
