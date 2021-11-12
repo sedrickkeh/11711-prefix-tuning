@@ -66,7 +66,19 @@ python train_bart.py --mode xsum --preseqlen 200 --do_train yes --fp16 yes --bsz
 ```
 
 ## 3. Low-data Settings
+Before running these experiments, first construct the low-data datasets using [this script](https://github.com/sedrickkeh/PrefixTuning/blob/cleaned/data/e2e_data/sample.py). <br>
 
+Dataset size 50
+```bash
+python train_e2e.py --preseqlen 5 --learning_rate 8e-5 --seed 88 --bsz 10 --lowdata_token 'table-to-text-restaurant:' --epoch 100 --warmup_steps 300 --notes earlystoplowdata_88_50
+```
+Dataset size 100
+```bash
+Dataset 100
+python train_e2e.py --preseqlen 5 --learning_rate 7e-5 --seed 88 --bsz 10 --lowdata_token 'table-to-text-restaurant:' --epoch 100 --warmup_steps 100 --notes earlystoplowdata_88_100
+```
+
+Experiments were done for dataset sizes 50, 100, 200, and 500. Scripts for dataset sizes 200 and 500 are analogous to the ones above.
 
 ## 4. Ablation Studies
 We conduct two ablation studies:
