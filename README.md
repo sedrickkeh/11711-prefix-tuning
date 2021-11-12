@@ -69,3 +69,15 @@ python train_bart.py --mode xsum --preseqlen 200 --do_train yes --fp16 yes --bsz
 
 
 ## 4. Ablation Studies
+We conduct two ablation studies:
+1. Prefix Length <br>
+This builds on the experiments for DART.
+```bash
+python train_e2e.py --mode triples --preseqlen (prefix_length) --seed 9 --bsz 5 --epoch 5 --learning_rate 8e-5
+```
+
+2. Prefix Initialization <br>
+This builds on the experiments for low-data E2E settings.
+```bash
+python train_e2e.py --preseqlen 5 --lowdata_token (insert_initialization_here) --learning_rate 7e-5 --seed 88 --bsz 10 --epoch 100 --warmup_steps 100 --notes earlystoplowdata_88_500
+```
