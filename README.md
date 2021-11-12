@@ -36,7 +36,8 @@ pip install sacrebleu
 pip install unidecode
 ```
 
-3. Run experiment code (example below)
+3. Run experiment code (example below): <br>
+Note that some of the file paths may need to be changed.
 ```bash
 python train_e2e.py --preseqlen 5 --learning_rate 0.00008 --seed 88 --epoch 5
 ```
@@ -53,5 +54,6 @@ python train_bart.py --mode xsum --preseqlen 200 --do_train yes --fp16 yes --bsz
 ```
 
 ## 3. Low-data Settings
+
 
 ## 4. Ablation Studies
