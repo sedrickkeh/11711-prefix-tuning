@@ -17,7 +17,13 @@ Some changes we made included the following:
 
 
 ## 0. Quickstart
-Steps to reproduce:
+We recommend looking at the the following notebooks, which cover all the steps, including cloning repos, downloading dependencies, running the training scripts, and doing evaluation. 
+- [prefix_tuning_e2e.ipynb](prefix_tuning_e2e.ipynb)
+- [prefix_tuning_webnlg.ipynb](prefix_tuning_webnlg.ipynb)
+- [prefix_tuning_dart.ipynb](prefix_tuning_dart.ipynb)
+
+--- 
+Alternatively, below are instructions to reproduce:
 1. Clone the following repos:
 ```bash
 $ git clone https://github.com/sedrickkeh/PrefixTuning.git
@@ -37,10 +43,16 @@ pip install unidecode
 ```
 
 3. Run experiment code (example below): <br>
-Note that some of the file paths may need to be changed.
 ```bash
 python train_e2e.py --preseqlen 5 --learning_rate 0.00008 --seed 88 --epoch 5
 ```
+
+4. Run evaluation code 
+```bash
+bash ./dart/evaluation/run_eval_on_webnlg.sh
+```
+
+For 3. and 4. above, note that you may need to modify some of the file paths.
 
 ## 1. Table-to-text Results
 
